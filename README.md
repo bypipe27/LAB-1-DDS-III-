@@ -1,3 +1,44 @@
+﻿# Información académica
+
+- **Estudiante:** Felipe Ortiz Calan
+- **Código:** 2380642
+- **Universidad:** Universidad del Valle
+- **Materia:** Desarrollo de Software 3
+
+## Inicializar el proyecto
+
+### Requisitos
+
+- Java 11 o superior.
+- IntelliJ IDEA u otro IDE compatible con proyectos Java.
+- Conexión a internet para consultar la API de YGOProDeck y descargar las
+  imágenes de las cartas.
+
+### Ejecución desde IntelliJ IDEA
+
+1. Abrir la carpeta del proyecto en IntelliJ IDEA.
+2. Verificar que el SDK configurado sea Java 11 o superior.
+3. Confirmar que la librería `lib/json-20230227.jar` esté incluida en el
+   classpath del proyecto.
+4. Abrir `src/Main.java`.
+5. Ejecutar el método `main`.
+
+### Ejecución desde la terminal
+
+Desde la carpeta raíz del proyecto, compilar las clases con:
+
+```bash
+javac -cp lib/json-20230227.jar -d out src/*.java
+```
+
+Después, iniciar la aplicación con:
+
+```bash
+java -cp "out:lib/json-20230227.jar" Main
+```
+
+En Windows, reemplazar `:` por `;` en el classpath.
+
 ## Diseño
 El proyecto está organizado en paquetes que separan claramente las responsabilidades:
 `model` contiene la clase `Card`, un POJO que representa una carta Monster con su
