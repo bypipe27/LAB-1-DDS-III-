@@ -28,30 +28,30 @@ mano. Gana el primero en alcanzar 2 rondas.
 Aquí se muestra la ventana recién abierta, con el botón **Iniciar duelo**
 disponible y el log de batalla vacío a la espera de la primera partida.
 
-![Pantalla inicial](capturas/01-inicio.png)
+![Pantalla inicial](capturas/inicio.png)
 
 ### 2. Carga de cartas desde la API
 Al presionar **Iniciar duelo**, la aplicación consulta varias veces el endpoint
 `randomcard.php` y descarga las imágenes en segundo plano sin congelar la
 interfaz.
 
-![Carga de cartas](capturas/02-carga.png)
+![Carga de cartas](capturas/carga.png)
 
 ### 3. Duelo en curso
 Las tres cartas del jugador se muestran a la izquierda con su imagen, nombre,
 ATK y DEF. La mano de la máquina permanece oculta hasta que se resuelve cada
 turno.
 
-![Duelo en curso](capturas/03-duelo.png)
-
+![Duelo en curso](capturas/duelo1.png)
+![Duelo en curso2](capturas/duelo2.png)
 ### 4. Log de batalla con resultado del turno
 Cada turno agrega una línea al log indicando qué carta jugó cada bando, el
 resultado y el marcador acumulado. Los empates también se registran.
 
-![Log de batalla](capturas/04-log.png)
+![Log de batalla](capturas/log.png)
 
 ### 5. Anuncio del ganador
 Cuando un jugador alcanza 2 rondas ganadas, aparece un `JOptionPane` con el
 nombre del ganador y el log se cierra con la línea `=== GANADOR: ... ===`.
 
-![Ganador final](capturas/05-ganador.png)
+![Ganador final](capturas/ganador.png)

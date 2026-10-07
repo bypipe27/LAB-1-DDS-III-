@@ -23,8 +23,10 @@ public class YugiApiClient {
     private static final String RANDOM_URL =
             "https://db.ygoprodeck.com/api/v7/randomcard.php";
 
-    // Cliente HTTP reutilizable (nuevo en Java 11)
-    private final HttpClient httpClient = HttpClient.newHttpClient();
+    // Sigue redirecciones HTTP como la respuesta 301 de la API.
+    private final HttpClient httpClient = HttpClient.newBuilder()
+            .followRedirects(HttpClient.Redirect.NORMAL)
+            .build();
 
     /** Pide cartas al azar hasta obtener una Monster. */
     public Card getRandomMonster() throws Exception {
